@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neon Charger Battle</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="arena">
+    <header class="title-wrap">
+      <h1>Neon Charger: Pulse Battle</h1>
+      <p>Build charge, unleash neon attacks, and outlast your rival.</p>
+    </header>
+
+    <section class="status-grid" aria-label="Battle status">
+      <article class="fighter-card player">
+        <h2>You</h2>
+        <div class="bar-row"><span>Health</span><div class="bar"><div id="player-health" class="fill health"></div></div><strong id="player-health-text">100</strong></div>
+        <div class="bar-row"><span>Charge</span><div class="bar"><div id="player-charge" class="fill charge"></div></div><strong id="player-charge-text">0</strong></div>
+      </article>
+
+      <div class="versus">VS</div>
+
+      <article class="fighter-card enemy">
+        <h2>Rival Core</h2>
+        <div class="bar-row"><span>Health</span><div class="bar"><div id="enemy-health" class="fill health"></div></div><strong id="enemy-health-text">100</strong></div>
+        <div class="bar-row"><span>Charge</span><div class="bar"><div id="enemy-charge" class="fill charge"></div></div><strong id="enemy-charge-text">0</strong></div>
+      </article>
+    </section>
+
+    <section class="controls" aria-label="Battle controls">
+      <button id="charge-btn">⚡ Charge (+18)</button>
+      <button id="attack-btn">💥 Strike (Cost 20)</button>
+      <button id="burst-btn">🌌 Neon Burst (Cost 50)</button>
+      <button id="reset-btn">🔄 Reset</button>
+    </section>
+
+    <section class="log-wrap">
+      <h3>Combat Log</h3>
+      <ul id="battle-log" aria-live="polite"></ul>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
