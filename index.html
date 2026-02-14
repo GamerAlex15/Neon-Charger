@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neon Charger: Street Clash</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="arena">
+    <header class="title-wrap">
+      <h1>Neon Charger: Street Clash</h1>
+      <p>A two-player physical fight. Trade punches, build momentum, and finish the round.</p>
+    </header>
+
+    <section class="turn-banner" aria-live="polite">
+      <strong id="turn-label">Turn: Player 1</strong>
+    </section>
+
+    <section class="status-grid" aria-label="Fight status">
+      <article class="fighter-card player1">
+        <h2>Player 1</h2>
+        <div class="bar-row"><span>Health</span><div class="bar"><div id="p1-health" class="fill health"></div></div><strong id="p1-health-text">100</strong></div>
+        <div class="bar-row"><span>Stamina</span><div class="bar"><div id="p1-stamina" class="fill stamina"></div></div><strong id="p1-stamina-text">25</strong></div>
+      </article>
+
+      <div class="versus">VS</div>
+
+      <article class="fighter-card player2">
+        <h2>Player 2</h2>
+        <div class="bar-row"><span>Health</span><div class="bar"><div id="p2-health" class="fill health"></div></div><strong id="p2-health-text">100</strong></div>
+        <div class="bar-row"><span>Stamina</span><div class="bar"><div id="p2-stamina" class="fill stamina"></div></div><strong id="p2-stamina-text">25</strong></div>
+      </article>
+    </section>
+
+    <section class="controls" aria-label="Fight controls">
+      <button id="jab-btn">👊 Jab (Cost 10)</button>
+      <button id="kick-btn">🦵 Kick (Cost 20)</button>
+      <button id="combo-btn">🥊 Combo Rush (Cost 35)</button>
+      <button id="focus-btn">🫁 Catch Breath (+18)</button>
+      <button id="reset-btn">🔄 New Round</button>
+    </section>
+
+    <section class="log-wrap">
+      <h3>Fight Log</h3>
+      <ul id="fight-log" aria-live="polite"></ul>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
