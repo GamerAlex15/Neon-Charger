@@ -3,25 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Neon Charger: Street Clash</title>
+  <title>Neon Charger: 3D Street Clash</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <main class="arena">
     <header class="title-wrap">
-      <h1>Neon Charger: Street Clash</h1>
-      <p>A two-player physical fight. Trade punches, build momentum, and finish the round.</p>
+      <h1>Neon Charger: 3D Street Clash</h1>
+      <p>Two players, physical strikes, charged specials, and a deeper arena feel.</p>
     </header>
 
     <section class="turn-banner" aria-live="polite">
       <strong id="turn-label">Turn: Player 1</strong>
+      <span id="phase-label">Phase: Neutral</span>
+    </section>
+
+    <section class="stage" aria-label="3D fight stage">
+      <div class="fighter fighter-left" id="fighter-left">
+        <div class="name">P1</div>
+      </div>
+      <div class="fighter fighter-right" id="fighter-right">
+        <div class="name">P2</div>
+      </div>
     </section>
 
     <section class="status-grid" aria-label="Fight status">
       <article class="fighter-card player1">
         <h2>Player 1</h2>
         <div class="bar-row"><span>Health</span><div class="bar"><div id="p1-health" class="fill health"></div></div><strong id="p1-health-text">100</strong></div>
-        <div class="bar-row"><span>Stamina</span><div class="bar"><div id="p1-stamina" class="fill stamina"></div></div><strong id="p1-stamina-text">25</strong></div>
+        <div class="bar-row"><span>Stamina</span><div class="bar"><div id="p1-stamina" class="fill stamina"></div></div><strong id="p1-stamina-text">30</strong></div>
+        <div class="bar-row"><span>Charge</span><div class="bar"><div id="p1-charge" class="fill charge"></div></div><strong id="p1-charge-text">0</strong></div>
       </article>
 
       <div class="versus">VS</div>
@@ -29,15 +40,17 @@
       <article class="fighter-card player2">
         <h2>Player 2</h2>
         <div class="bar-row"><span>Health</span><div class="bar"><div id="p2-health" class="fill health"></div></div><strong id="p2-health-text">100</strong></div>
-        <div class="bar-row"><span>Stamina</span><div class="bar"><div id="p2-stamina" class="fill stamina"></div></div><strong id="p2-stamina-text">25</strong></div>
+        <div class="bar-row"><span>Stamina</span><div class="bar"><div id="p2-stamina" class="fill stamina"></div></div><strong id="p2-stamina-text">30</strong></div>
+        <div class="bar-row"><span>Charge</span><div class="bar"><div id="p2-charge" class="fill charge"></div></div><strong id="p2-charge-text">0</strong></div>
       </article>
     </section>
 
     <section class="controls" aria-label="Fight controls">
-      <button id="jab-btn">👊 Jab (Cost 10)</button>
-      <button id="kick-btn">🦵 Kick (Cost 20)</button>
-      <button id="combo-btn">🥊 Combo Rush (Cost 35)</button>
-      <button id="focus-btn">🫁 Catch Breath (+18)</button>
+      <button id="jab-btn">👊 Jab (10 STA)</button>
+      <button id="kick-btn">🦵 Kick (20 STA)</button>
+      <button id="guard-btn">🛡️ Guard (8 STA)</button>
+      <button id="charge-btn">⚡ Charge (+22 CHG)</button>
+      <button id="burst-btn">🌌 Charged Slam (40 STA + 60 CHG)</button>
       <button id="reset-btn">🔄 New Round</button>
     </section>
 
